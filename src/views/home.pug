@@ -1,0 +1,31 @@
+doctype html
+html(lang="ko")
+  head
+    meta(charset="UTF-8")
+    title 마피아 게임!
+    link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+  body
+    header 
+      h1 마피아 게임에 오신것을 환영합니다!
+      h3#myNickname 현재 닉네임: 익명
+      div#nickname
+        form 
+          input(placeholder = "닉네임 입력", autofocus, required, type = "text")
+          button 생성
+    main
+      div#rooms
+        form 
+          input(placeholder = "방 이름", required, type = "text")
+          button 참가/생성
+      div#roomList
+        h4 현재 열린 방
+        ul 
+      div#inRoom
+        h3#roomName
+        ul 
+        form
+          input(placeholder = "여기에 입력하세요", required, type = "text")
+          button 보내기
+      
+    script(src = "/socket.io/socket.io.js")
+    script(src = "../public/js/app.js")
